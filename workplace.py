@@ -24,3 +24,8 @@ def investment_solver(year, init_money, interest_rate, investment_return):
                 init_temp = money_temp
                 if money_temp == investment_return:
                     return i_r / 10
+    if investment_return == "X":
+        for i in range(year):
+            invest_temp = (init_money * interest_rate) + init_money
+            init_money = invest_temp
+        return invest_temp
