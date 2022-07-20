@@ -8,3 +8,9 @@ def investment_solver(year, init_money, interest_rate, investment_return):
             year_temp += 1
             invest_temp = remain_money
         return year_temp
+    if init_money == "X":
+        init_temp = investment_return
+        for i in range(year):
+            money_temp = (init_temp / (1 + interest_rate))
+            init_temp = money_temp
+        return init_temp
