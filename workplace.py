@@ -29,3 +29,15 @@ def investment_solver(year, init_money, interest_rate, investment_return):
             invest_temp = (init_money * interest_rate) + init_money
             init_money = invest_temp
         return invest_temp
+
+year = investment_solver("X", 10000, 0.1, 25937.424601000006)
+print(year)
+
+init_money = investment_solver(10, "X", 0.1, 25937.424601000006)
+print(init_money)
+
+interest_rate = investment_solver(10, 10000, "X", 25937.424601000006)
+print(interest_rate)
+
+investment_return = investment_solver(10, 10000, 0.1, "X")
+print(investment_return)
