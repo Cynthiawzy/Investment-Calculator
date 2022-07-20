@@ -14,3 +14,13 @@ def investment_solver(year, init_money, interest_rate, investment_return):
             money_temp = (init_temp / (1 + interest_rate))
             init_temp = money_temp
         return init_temp
+    if interest_rate == "X":
+        money_temp = 0
+        for i_r in range(100):
+            init_temp = init_money
+            del money_temp
+            for i in range(year + 2):
+                money_temp = (init_temp * (i_r / 10)) + init_temp
+                init_temp = money_temp
+                if money_temp == investment_return:
+                    return i_r / 10
